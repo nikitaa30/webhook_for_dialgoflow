@@ -17,15 +17,20 @@ mongo = PyMongo(app)
 
 @app.route('/add')
 def add():
+	
+	
 	user=mongo.db.users
 	user.insert({'Name': 'nikita', 'Review': 'nice'})
 	return 'Added!'
 
 @app.route('/')
 def index():
-		return 'welcome user!'
+	return 'welcome user!'
+	
+		
 @app.route('/webhook', methods=['POST'])
 def webhook():
+	
 		req = request.get_json(silent=True, force=True)
 
 		#print("Request:")
@@ -33,6 +38,7 @@ def webhook():
 
 
 		if req.get("result").get("action") == "website_review":
+			
 
 			res = makeWebhookResult1(req)
 			res = json.dumps(res, indent=4)
@@ -61,6 +67,7 @@ def webhook():
 		else:
 			return {}
 
+	
 
 
 
