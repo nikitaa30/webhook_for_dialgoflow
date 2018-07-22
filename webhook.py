@@ -25,7 +25,7 @@ def add():
 def index():
 	
 	return 'welcome user!'
-@app.route('/webhook', methods=['POST'])
+@app.route('/webhook', methods=['GET','POST'])
 def webhook():
 	
 	req = request.get_json(silent=True, force=True)
@@ -114,7 +114,6 @@ def makeWebhookResult2(req):
        "source": "webhook"
    }
 def makeWebhookResult3(req):
-	
 	 
 	parameters = req.get("result").get("parameters")
 	fname = parameters.get("tutor-first-name")
@@ -140,9 +139,9 @@ def makeWebhookResult3(req):
 
 if __name__ == '__main__':
 	
-	port = int(os.getenv('PORT', 8000))
+	port = int(os.getenv('PORT', 5000))
 
-	print "Starting app on port %d" % port
+	#print "Starting app on port %d" % port
 
 	app.run(debug=True, port=port, host='0.0.0.0')
 
