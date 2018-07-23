@@ -1,0 +1,7 @@
+{
+  "name": "API.AI Database Webhook",
+  "description": "API.AI Webhook",
+  "repository": "https://github.com/nikitaa30/webhook_for_dialgoflow",
+  "logo": "http://xvir.github.io/img/apiai.png",
+  "keywords": ["api.ai", "natural language"]
+}
