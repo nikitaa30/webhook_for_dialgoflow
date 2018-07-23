@@ -88,7 +88,7 @@ def makeWebhookResult1(req):
        # "data": data,
        # "contextOut": [],
        "source": "webhook"
-   			}
+   		}
 
 def makeWebhookResult2(req):
 		
@@ -112,7 +112,7 @@ def makeWebhookResult2(req):
        # "data": data,
        # "contextOut": [],
        "source": "webhook"
-   }
+   		}
 def makeWebhookResult3(req):
 	 
 	parameters = req.get("result").get("parameters")
@@ -128,13 +128,13 @@ def makeWebhookResult3(req):
 
 	#print("Response:")
 	#print(speech)
-		return {
+	return {
        "speech": speech,
        "displayText": speech,
        # "data": data,
        # "contextOut": [],
        "source": "webhook"
-   }
+  		}
 
 
 if __name__ == '__main__':
