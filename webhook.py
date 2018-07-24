@@ -101,11 +101,11 @@ def makeWebhookResult2(req):
 	print( 'Added!')
 		
 
-	speech = "Thanks for contacting us. Your Question has been recorded \n
-	and our Tutors will provide with an optimum solution as soon as possible. Please Share your views on Live Padhai.:)\n
-	\n
-	The ratings are-\n
-	{Excellent, Great, Average, Poor, Very Poor}"
+	speech = "Thanks for contacting us. Your Question has been recorded" +
+	"and our Tutors will provide with an optimum solution as soon as possible. Please Share your views on Live Padhai.:)"+
+	
+	"The ratings are-"+
+	"{Excellent, Great, Average, Poor, Very Poor}"
 "
 
 	#print("Response:")
@@ -129,11 +129,11 @@ def makeWebhookResult3(req):
 	user.insert({ 'Name': str(fname)+str(lname), 'Review': rev})
 	print( 'Added!')
 
-	speech = "Thanks for contacting us. Your Question has been recorded \n
-	and our Tutors will provide with an optimum solution as soon as possible. Please Share your views on Live Padhai.:)\n
-	\n
-	The ratings are-\n
-	{Excellent, Great, Average, Poor, Very Poor}"
+	speech = "Thanks for contacting us. Your Question has been recorded" +
+	"and our Tutors will provide with an optimum solution as soon as possible. Please Share your views on Live Padhai.:)"+
+	
+	"The ratings are-"+
+	"{Excellent, Great, Average, Poor, Very Poor}"
 	#print("Response:")
 	#print(speech)
 	return {
