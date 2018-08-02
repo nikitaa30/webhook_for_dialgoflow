@@ -71,9 +71,23 @@ def makeWebhookResult1(req):
 	 
 	parameters = req.get("result").get("parameters")
 	review = parameters.get("review_on_website")
+	rev=""
+	if review=='a':
+		rev="5-stars"
+	elif rev=='b':
+		rev="4-stars"
+	elif review=='c':
+		rev="3-stars"
+	elif review=='d':
+		rev="2-stars"
+	elif review=='e':
+		rev="1-star"
+	else:
+		rev= review
+	
 
 	user=mongo.db.LivePadhaiReview
-	user.insert({ 'Review': review})
+	user.insert({ 'Review': rev})
 	print( 'Added!')
 		
 
