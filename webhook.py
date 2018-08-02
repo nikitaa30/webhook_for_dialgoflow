@@ -102,8 +102,8 @@ def makeWebhookResult2(req):
 		
 
 	speech = "Thanks for contacting us. Your Question has been recorded \
-	and our Tutors will provide with an optimum solution as soon as possible. Please Share your views on Live Padhai.:)\
-	The ratings are- {Excellent, Great, Average, Poor, Very Poor}"
+	and our Tutors will provide with an optimum solution as soon as possible.\n Choose Any of the Options below to Rate our website.\n a) 5-Stars \n b)4-Stars \n c)3-Stars \n d)2-Stars \n e)1-Star" 
+	
 
 	#print("Response:")
 	#print(speech)
@@ -126,9 +126,8 @@ def makeWebhookResult3(req):
 	user.insert({ 'Name': str(fname)+str(lname), 'Review': rev})
 	print( 'Added!')
 
-	speech = "Thanks for contacting us. Your Question has been recorded \
-	and our Tutors will provide with an optimum solution as soon as possible. Please Share your views on Live Padhai.:)\
-	The ratings are- {Excellent, Great, Average, Poor, Very Poor}"
+	speech = "Thank you so much. Your Review about the tutor has been recorded.\n Choose Any of the Options below to Rate our website.\n a) 5-Stars \n b)4-Stars \n c)3-Stars \n d)2-Stars \n e)1-Star" 
+	
 	#print("Response:")
 	#print(speech)
 	return {
